@@ -1,0 +1,136 @@
+/* CSS resets */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+
+/* Utility Classes */
+.circle {
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    border: 1rem solid black;
+}
+
+
+/* Styling Elements */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+
+    min-height: 100vh;
+}
+
+.compass {
+    width: 20rem;
+    position: relative;
+    transition: cubic-bezier(1, 0, 0, 1) 2s;
+    rotate: 20deg;
+}
+
+.symbol {
+    font-weight: bold;
+    font-size: 2rem;
+    position: absolute;
+    /* border: 1px solid black; */
+}
+
+.symbol:nth-child(1) {
+    translate: -50% -50%;
+    color: red;
+    top: 10%;
+    left: 50%;
+}
+
+.symbol:nth-child(2) {
+    translate: 0 -50%;
+    top: 50%;
+    right: 5%;
+}
+
+.symbol:nth-child(3) {
+    translate: -50% 50%;
+    left: 50%;
+    bottom: 10%;
+}
+
+.symbol:nth-child(4) {
+    translate: -50% -50%;
+    top: 50%;
+    left: 10%;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-right: .5rem solid transparent;
+    border-left: .5rem solid transparent;
+    border-bottom: 3rem solid red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -100%;
+}
+
+.arrow::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-right: .5rem solid transparent;
+    border-left: .5rem solid transparent;
+    border-top: 3rem solid black;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    translate: -50% 100%;
+}
