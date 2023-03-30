@@ -75,7 +75,6 @@ body {
     width: 20rem;
     position: relative;
     transition: cubic-bezier(1, 0, 0, 1) 2s;
-    rotate: 20deg;
 }
 
 .symbol {
